@@ -23,8 +23,11 @@
 #' @import xml2
 #' @import dplyr
 #' @import magrittr
-#' @import purrr
-#' @import stringr
+#' @importFrom purrr map map_df map_chr
+#' @importFrom stringr str_split
+#' @importFrom graphics title
+#' @importFrom stats setNames
+#' @importFrom utils type.convert
 #' 
 #' @export
 #'

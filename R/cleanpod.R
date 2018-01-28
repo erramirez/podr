@@ -25,9 +25,12 @@
 #'
 #' @import dplyr
 #' @import magrittr
-#' @import purrr
-#' @import lubridate
-#' @import stringr
+#' @importFrom purrr map map_df map_chr
+#' @importFrom lubridate dmy hms
+#' @importFrom stringr str_split
+#' @importFrom graphics title
+#' @importFrom stats setNames
+#' @importFrom utils type.convert
 #'
 #' @export
 #' 
