@@ -13,7 +13,7 @@ Imports:
     xml2,
     tidyverse,
     lubridate
-URL: http://ernestoramirez.com/podr
+URL:  https://github.com/erramirez/podr/
 BugReports: https://github.com/erramirez/podr/issues
 License: GPL-2 
 Encoding: UTF-8
