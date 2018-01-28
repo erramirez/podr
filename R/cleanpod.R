@@ -26,8 +26,11 @@
 #' @import tidyverse
 #' @import lubridate
 #'
-#' @examples
+#' @export
+#' 
+#' @examples {
 #' cleanpod(jjgo)
+#' }
 
 cleanpod <- function(dfreadpod) {
   df2 <- dfreadpod %>%

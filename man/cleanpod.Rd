@@ -43,5 +43,7 @@ be missing data. Be on the lookout for the following issues:
 }
 }
 \examples{
+{
 cleanpod(jjgo)
+}
 }

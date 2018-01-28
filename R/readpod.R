@@ -22,11 +22,14 @@
 #'
 #' @import xml2
 #' @import tidyverse
+#' 
+#' @export
 #'
 #'
-#' @examples
+#' @examples {
 #' readpod("http://thornmorris.libsyn.com/rss")
 #' readpod("http://feeds.feedburner.com/stoppodcastingyourself")
+#' }
 
 readpod <- function(feed) {
   doc <- read_xml(feed)

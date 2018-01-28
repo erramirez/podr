@@ -35,6 +35,8 @@ If the feed link is broken, or entered incorrectly, you will get an error
 indicating "xmlParseEntityRef: no name". Please check your feed link.
 }
 \examples{
+{
 readpod("http://thornmorris.libsyn.com/rss")
 readpod("http://feeds.feedburner.com/stoppodcastingyourself")
+}
 }
