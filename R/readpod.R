@@ -28,8 +28,8 @@
 #' readpod("http://thornmorris.libsyn.com/rss")
 #' readpod("http://feeds.feedburner.com/stoppodcastingyourself")
 
-readpod <- function(x, y) {
-  doc <- read_xml(x)
+readpod <- function(feed) {
+  doc <- read_xml(feed)
   podtitle <- xml_find_first(doc, "//channel//title") %>%
     xml_text()
   nodes <- xml_find_all(doc, ".//item")

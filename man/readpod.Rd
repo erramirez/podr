@@ -5,7 +5,7 @@
 \title{Given a podcast rss feed, this function will return a data frame
 that contains the data contained in the <item> node.}
 \usage{
-readpod(x, y)
+readpod(feed)
 }
 \arguments{
 \item{feed}{A rss link}
