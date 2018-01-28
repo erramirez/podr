@@ -25,9 +25,7 @@
 #' @import magrittr
 #' @import purrr
 #' @import stringr
-#' @importFrom("graphics", "title")
-#' @importFrom("stats", "setNames")
-#' @importFrom("utils", "type.convert")
+#' 
 #' @export
 #'
 #'
