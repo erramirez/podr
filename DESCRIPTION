@@ -11,7 +11,10 @@ Description: Given a podcast rss feed, these functions can perofrm two
     show duration. 
 Imports:
     xml2,
-    tidyverse,
+    dplyr,
+    magrittr,
+    purrr,
+    stringr,
     lubridate
 URL:  https://github.com/erramirez/podr/
 BugReports: https://github.com/erramirez/podr/issues

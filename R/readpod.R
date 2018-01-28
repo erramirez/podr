@@ -21,8 +21,13 @@
 #'
 #'
 #' @import xml2
-#' @import tidyverse
-#' 
+#' @import dplyr
+#' @import magrittr
+#' @import purrr
+#' @import stringr
+#' @importFrom("graphics", "title")
+#' @importFrom("stats", "setNames")
+#' @importFrom("utils", "type.convert")
 #' @export
 #'
 #'

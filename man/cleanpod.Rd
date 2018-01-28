@@ -44,6 +44,7 @@ be missing data. Be on the lookout for the following issues:
 }
 \examples{
 {
-cleanpod(jjgo)
+jjgo <- readpod("http://thornmorris.libsyn.com/rss")
+jjgoclean <- cleanpod(jjgo)
 }
 }

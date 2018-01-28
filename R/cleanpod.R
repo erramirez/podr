@@ -23,13 +23,17 @@
 #' @param dfreadpod a data frame created with readpod
 #' @return cleaned episode data contained in \code{dfreadpod}
 #'
-#' @import tidyverse
+#' @import dplyr
+#' @import magrittr
+#' @import purrr
 #' @import lubridate
+#' @import stringr
 #'
 #' @export
 #' 
 #' @examples {
-#' cleanpod(jjgo)
+#' jjgo <- readpod("http://thornmorris.libsyn.com/rss")
+#' jjgoclean <- cleanpod(jjgo)
 #' }
 
 cleanpod <- function(dfreadpod) {
