@@ -51,7 +51,7 @@ cleanpod <- function(dfreadpod) {
              map(str_split, pattern = " ") %>%
              map_chr(c(1,4)),
            date = dmy(paste(day, month, year, sep= "")),
-           hms = ifelse(is.na(hms(duration)), 0, 1),
+           hms = ifelse(is.na(suppressWarnings(hms(duration))), 0, 1),
            showlengthminutes = ifelse(hms == 1,
                                       sapply(strsplit(as.character(duration),":"),
                                              function(x) {
