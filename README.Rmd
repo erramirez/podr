@@ -1,10 +1,8 @@
 ---
-title: "README"
-date: "1/28/2018"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -20,16 +18,18 @@ devtools::install_github("erramirez/podr")
 ## Key Functions
 
 `podr` is primarily composed of two functions:
-1. `readpod` will extract relevant information from a podcast feed according to the information available within the <item> node. Additionally, it will read and append the podcast title according to what is present in <channel><title>.
-2. `cleapod` will read a data frame created with `readpod` and reduce to a tibble with four variables:
-  + podtitle: the title of the podcast
-  + title: the episdoe title
-  + date: the date the episode was published
-  + showlength: the duration of the podcast in seconds
+
+1. The first function, `readpod`, will extract relevant information from a podcast feed according to the information available within the **item** node. Additionally, it will read and append the podcast title according to what is present in **channel/title**.
+2. The second function, `cleapod`, will read a data frame created with `readpod` and reduce to a tibble with four variables:
+    + podtitle: the title of the podcast
+    + title: the episdoe title
+    + date: the date the episode was published
+    + showlength: the duration of the podcast in seconds
+    
 `cleanpod` is primarily used to clean up the date and duration information in a podcast feed in order to make it computable. 
 
 ## Usage  
-Let't say you were really interested in learning how much time you spent listening to your favorite podcat, **Jordan, Jesse Go!**, in 2017. 
+Let't say you were really interested in learning how much time you spent listening to your favorite podcast, _Jordan, Jesse Go!_, in 2017. 
 
 First we would use `readpod` to read the podcast feed. 
 
@@ -51,12 +51,22 @@ jjgoclean
 
 Now that we have a cleaned data set that contains all the relevant information we can use a few simple tidy tools. 
 
-```{r}
+```{r message=FALSE}
 
-jjgoclean %>% 
-  filter(date > "2016-12-31" & date < "2018-01-01") %>% 
-  second_to_period(sum(showlength))
+library(tidyverse)
+library(lubridate)
+
+jjgoclean2k17 <- jjgoclean %>% 
+  filter(date > "2016-12-31" & date < "2018-01-01")
+
+#find the total duration of Jordan, Jesse GO! in seconds
+sum(jjgoclean2k17$showlength)
+
+#find the total as a period 
+seconds_to_period(sum(jjgoclean2k17$showlength))
 
 ```
+
+So there you have it. You can use `podr` to find out _Jordan, Jesse GO!_ put out **2d 18H 52M 7S** of hilarious shows in 2017. 
 
 
