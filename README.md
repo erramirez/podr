@@ -53,6 +53,8 @@ jjgo
     ## # ... with 518 more rows, and 5 more variables: explicit <chr>,
     ## #   keywords <chr>, subtitle <chr>, episodeType <chr>, podtitle <fct>
 
+*Not sure how to get the rss feed url for your podcast and useing iTunes? [Check out this tip](https://superuser.com/a/79616/867063).*
+
 We can then use `cleanpod` to clean up the podcast data to something usable to answer our question.
 
 ``` r

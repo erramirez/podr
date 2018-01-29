@@ -31,6 +31,7 @@ Let't say you were really interested in learning how much time you spent listeni
 
 First we would use `readpod` to read the podcast feed. 
 
+
 ```{r}
 library(podr)
 
@@ -38,6 +39,7 @@ jjgo <- readpod("http://thornmorris.libsyn.com/rss")
 
 jjgo
 ```
+_Not sure how to get the rss feed url for your podcast and useing iTunes? [Check out this tip](https://superuser.com/a/79616/867063)._
 
 We can then use `cleanpod` to clean up the podcast data to something usable to answer our question. 
 
