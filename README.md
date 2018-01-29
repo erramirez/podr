@@ -1,5 +1,5 @@
 
-`podr` is a very simple package containing two function for reading and cleaning data from a podcast feed.
+`podr` is a very simple package containing two functions for reading and cleaning data from a podcast feed.
 
 Installation
 ------------
@@ -7,8 +7,6 @@ Installation
 ``` r
 devtools::install_github("erramirez/podr")
 ```
-
-`podr` will load two packages: `xml2` and `tidyverse`.
 
 Key Functions
 -------------
@@ -101,3 +99,10 @@ seconds_to_period(sum(jjgoclean2k17$showlength))
     ## [1] "2d 18H 52M 7S"
 
 So there you have it. You can use `podr` to find out *Jordan, Jesse GO!* put out **2d 18H 52M 7S** of hilarious shows in 2017.
+
+Note
+----
+
+Please feel free to share issues, notes, and ideas. This is my first public R package and I'd love to learn from you.
+
+*made with RStudio and* ❤️ *in* ☀️ *Los Angeles*
