@@ -69,6 +69,9 @@ seconds_to_period(sum(jjgoclean2k17$showlength))
 
 So there you have it. You can use `podr` to find out _Jordan, Jesse GO!_ put out **2d 18H 52M 7S** of hilarious shows in 2017. 
 
+## Updates
+**v0.2.0**: 2018-01-30. Updated to accept rss feeds that store duration in seconds in addition to v0.1.0 support for hh:mm:ss or mm:ss.  
+
 ## Note
 Please feel free to share issues, notes, and ideas. This is my first public R package and I'd love to learn from you. 
 

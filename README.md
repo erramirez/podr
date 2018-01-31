@@ -37,20 +37,20 @@ jjgo <- readpod("http://thornmorris.libsyn.com/rss")
 jjgo
 ```
 
-    ## # A tibble: 528 x 14
+    ## # A tibble: 529 x 14
     ##    title  pubDate guid  link  image description encoded enclosure duration
     ##    <chr>  <chr>   <chr> <chr> <chr> <chr>       <chr>   <chr>     <chr>   
-    ##  1 Ep. 5… Tue, 2… 4907… http… ""    "<p>Jordan… "<p>Jo… ""        01:13:35
-    ##  2 Ep. 5… Tue, 1… 593e… http… ""    "<p>Jordan… "<p>Jo… ""        01:22:55
-    ##  3 Ep. 5… Tue, 0… 7f52… http… ""    <p>Eliza S… <p>Eli… ""        01:24:50
-    ##  4 Ep. 5… Tue, 0… 8b79… http… ""    <p>Live fr… <p>Liv… ""        01:42:59
-    ##  5 Ep. 5… Tue, 1… e9bf… http… ""    "<p class=… "<p cl… ""        01:00:31
-    ##  6 Ep. 5… Tue, 1… 868a… http… ""    <p>Comedia… <p>Com… ""        01:26:16
-    ##  7 Ep. 5… Tue, 0… a0a8… http… ""    "<p>Comedi… <p>Com… ""        01:17:34
-    ##  8 Ep. 5… Tue, 2… e349… http… ""    <p>Fan fav… <p>Fan… ""        01:08:55
-    ##  9 Ep. 5… Tue, 2… 3322… http… ""    <p>Interna… <p>Int… ""        01:04:24
-    ## 10 Ep. 5… Tue, 1… dbe9… http… ""    "<p>Jordan… <p>Jor… ""        01:19:09
-    ## # ... with 518 more rows, and 5 more variables: explicit <chr>,
+    ##  1 Ep. 5… Tue, 3… 6158… http… ""    "<p>Jordan… "<p>Jo… ""        01:13:18
+    ##  2 Ep. 5… Tue, 2… 4907… http… ""    "<p>Jordan… "<p>Jo… ""        01:13:35
+    ##  3 Ep. 5… Tue, 1… 593e… http… ""    "<p>Jordan… "<p>Jo… ""        01:22:55
+    ##  4 Ep. 5… Tue, 0… 7f52… http… ""    <p>Eliza S… <p>Eli… ""        01:24:50
+    ##  5 Ep. 5… Tue, 0… 8b79… http… ""    <p>Live fr… <p>Liv… ""        01:42:59
+    ##  6 Ep. 5… Tue, 1… e9bf… http… ""    "<p class=… "<p cl… ""        01:00:31
+    ##  7 Ep. 5… Tue, 1… 868a… http… ""    <p>Comedia… <p>Com… ""        01:26:16
+    ##  8 Ep. 5… Tue, 0… a0a8… http… ""    "<p>Comedi… <p>Com… ""        01:17:34
+    ##  9 Ep. 5… Tue, 2… e349… http… ""    <p>Fan fav… <p>Fan… ""        01:08:55
+    ## 10 Ep. 5… Tue, 2… 3322… http… ""    <p>Interna… <p>Int… ""        01:04:24
+    ## # ... with 519 more rows, and 5 more variables: explicit <chr>,
     ## #   keywords <chr>, subtitle <chr>, episodeType <chr>, podtitle <fct>
 
 *Not sure how to get the rss feed url for your podcast and useing iTunes? [Check out this tip](https://superuser.com/a/79616/867063).*
@@ -63,20 +63,20 @@ jjgoclean <- cleanpod(jjgo)
 jjgoclean
 ```
 
-    ## # A tibble: 528 x 4
+    ## # A tibble: 529 x 4
     ##    podtitle          title                           date       showlength
     ##    <fct>             <chr>                           <date>          <dbl>
-    ##  1 Jordan, Jesse GO! Ep. 515: Catillion with Haley … 2018-01-23       4415
-    ##  2 Jordan, Jesse GO! Ep. 514: Tree Bees with Kevin … 2018-01-16       4975
-    ##  3 Jordan, Jesse GO! Ep. 513: Martinelli Toots with… 2018-01-09       5090
-    ##  4 Jordan, Jesse GO! Ep. 512: Live in London with N… 2018-01-02       6179
-    ##  5 Jordan, Jesse GO! Ep. 511: Bunny Shy with Elizab… 2017-12-19       3631
-    ##  6 Jordan, Jesse GO! Ep. 510: Hammerstice with Josh… 2017-12-12       5176
-    ##  7 Jordan, Jesse GO! Ep. 509: Hand to Hand to Mouth… 2017-12-05       4654
-    ##  8 Jordan, Jesse GO! Ep. 508: Wide Dumper with Chri… 2017-11-28       4135
-    ##  9 Jordan, Jesse GO! Ep. 507: Gooble Gooble with Jo… 2017-11-21       3864
-    ## 10 Jordan, Jesse GO! Ep. 506: The Sensitive Man in … 2017-11-14       4749
-    ## # ... with 518 more rows
+    ##  1 Jordan, Jesse GO! Ep. 516: The Tropical Itch wit… 2018-01-30       4398
+    ##  2 Jordan, Jesse GO! Ep. 515: Catillion with Haley … 2018-01-23       4415
+    ##  3 Jordan, Jesse GO! Ep. 514: Tree Bees with Kevin … 2018-01-16       4975
+    ##  4 Jordan, Jesse GO! Ep. 513: Martinelli Toots with… 2018-01-09       5090
+    ##  5 Jordan, Jesse GO! Ep. 512: Live in London with N… 2018-01-02       6179
+    ##  6 Jordan, Jesse GO! Ep. 511: Bunny Shy with Elizab… 2017-12-19       3631
+    ##  7 Jordan, Jesse GO! Ep. 510: Hammerstice with Josh… 2017-12-12       5176
+    ##  8 Jordan, Jesse GO! Ep. 509: Hand to Hand to Mouth… 2017-12-05       4654
+    ##  9 Jordan, Jesse GO! Ep. 508: Wide Dumper with Chri… 2017-11-28       4135
+    ## 10 Jordan, Jesse GO! Ep. 507: Gooble Gooble with Jo… 2017-11-21       3864
+    ## # ... with 519 more rows
 
 Now that we have a cleaned data set that contains all the relevant information we can use a few simple tidy tools.
 
@@ -101,6 +101,11 @@ seconds_to_period(sum(jjgoclean2k17$showlength))
     ## [1] "2d 18H 52M 7S"
 
 So there you have it. You can use `podr` to find out *Jordan, Jesse GO!* put out **2d 18H 52M 7S** of hilarious shows in 2017.
+
+Updates
+-------
+
+**v0.2.0**: 2018-01-30. Updated to accept rss feeds that store duration in seconds in addition to v0.1.0 support for hh:mm:ss or mm:ss.
 
 Note
 ----
