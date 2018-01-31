@@ -51,22 +51,24 @@ cleanpod <- function(dfreadpod) {
              map(str_split, pattern = " ") %>%
              map_chr(c(1,4)),
            date = dmy(paste(day, month, year, sep= "")),
+           durationseconds = ifelse(is.na(suppressWarnings(as.numeric(duration))), 0, 1),
            hms = ifelse(is.na(suppressWarnings(hms(duration))), 0, 1),
-           showlengthminutes = ifelse(hms == 1,
-                                      sapply(strsplit(as.character(duration),":"),
-                                             function(x) {
-                                               x <- as.numeric(x)
-                                               x[1]*60+x[2]+x[3]/60
-                                             }
-                                      ),
-                                      sapply(strsplit(as.character(duration),":"),
-                                             function(x) {
-                                               x <- as.numeric(x)
-                                               x[1]+x[2]/60
-                                             }
-                                      )
+           hmstoseconds = ifelse(hms == 1,
+                                 sapply(strsplit(as.character(duration),":"),
+                                        function(x) {
+                                          x <- as.numeric(x)
+                                          x[1]*60+x[2]+x[3]/60
+                                        }
+                                 ),
+                                 sapply(strsplit(as.character(duration),":"),
+                                        function(x) {
+                                          x <- as.numeric(x)
+                                          x[1]+x[2]/60
+                                        }
+                                 )
            ),
-           showlength = showlengthminutes*60
+           showlength = case_when(durationseconds == 1 ~ suppressWarnings(as.numeric(duration)),
+                                  durationseconds == 0 ~ hmstoseconds*60)
     ) %>%
     select(podtitle, title, date, showlength)
   df2
