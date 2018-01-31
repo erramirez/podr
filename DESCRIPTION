@@ -1,7 +1,7 @@
 Package: podr
 Type: Package
 Title: Simple Method For Reading And Cleaning Podcast Data
-Version: 0.1.0
+Version: 0.2.0
 Author: Ernesto Ramirez <er.ramirez@gmail.com>
 Maintainer: Ernesto Ramirez <er.ramirez@gmail.com>
 Description: Given a podcast rss feed, these functions can perofrm two
