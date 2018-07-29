@@ -113,3 +113,4 @@ Note
 Please feel free to share issues, notes, and ideas. This is my first public R package and I'd love to learn from you.
 
 *made with RStudio and* ❤️ *in* ☀️ *Los Angeles*
+a line I wrote on my local computer
